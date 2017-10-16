@@ -1,0 +1,21 @@
+<div class="datepicker">
+  <table>
+  <tr>
+  <th>Sun</th>
+  <th>Mon</th>
+  <th>Tue</th>
+  <th>Wed</th>
+  <th>Thu</th>
+  <th>Fri</th>
+  <th>Sat</th>
+  </tr>
+  <tr *ngFor="let items of days.day">
+  <td *ngFor="let item of items"  [class.today]="activeMonthYear && item == currentDate.getDate()"  (click)="selectDate(item)">
+    <ng-template [ngIf]="item != -1">
+      {{item}}
+    </ng-template>
+  </td>
+  </tr>
+  
+  </table>
+</div>
