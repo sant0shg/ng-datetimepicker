@@ -13,18 +13,58 @@ export class DatepickerComponent implements OnInit {
   activeMonthYear = false;
   currentDate:any;
   selectedDate:any;
-
+  months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ]
+  
   constructor() { 
     this.currentDate = new Date();
   }
 
   ngOnInit() {
-    this.selectedDate = new Date(2017,1);
-    this.updateMonth(2017,1);
+    this.selectedDate = this.currentDate;
+    this.updateMonth(this.selectedDate);
     
   }
 
-  updateMonth(year:number,month:number){
+  previousMonth(){
+    let tempMonth = this.selectedDate.getMonth();
+    let tempYear = this.selectedDate.getFullYear();
+    tempMonth--;
+    if(tempMonth < 0){
+      tempMonth = 11;
+      tempYear--;
+    }
+    this.selectedDate = new Date(tempYear,tempMonth);
+    this.updateMonth(this.selectedDate)
+  }
+
+  nextMonth(){
+    let tempMonth = this.selectedDate.getMonth();
+    let tempYear = this.selectedDate.getFullYear();
+    tempMonth++;
+    if(tempMonth > 11){
+      tempMonth = 0;
+      tempYear++;
+    }
+    this.selectedDate = new Date(tempYear,tempMonth);
+    this.updateMonth(this.selectedDate)
+  }
+
+  updateMonth(date:Date){
+    let year = date.getFullYear();
+    let month = date.getMonth();
     if(year == this.currentDate.getFullYear() && month == this.currentDate.getMonth()){
       this.activeMonthYear = true;
     }else{
@@ -85,7 +125,8 @@ export class DatepickerComponent implements OnInit {
     
   selectDate(date:number){
     this.selectedDate = new Date(this.selectedDate.getFullYear(),this.selectedDate.getMonth(),date);
-    console.log(this.selectedDate);
+    
   }
+  
   
 }

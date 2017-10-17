@@ -1,4 +1,9 @@
 <div class="datepicker">
+  <div class="header">
+    <span class="lt" (click)="previousMonth()">&lt;</span>
+    <span class="header-text">{{months[selectedDate.getMonth()]}} &nbsp; {{selectedDate.getFullYear()}}</span>
+    <span class="gt"  (click)="nextMonth()">&gt;</span>
+  </div>
   <table>
   <tr>
   <th>Sun</th>

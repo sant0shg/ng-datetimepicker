@@ -1,0 +1,23 @@
+td.today{
+    background: #337ab7;
+    color: #fff;
+}
+td{
+    text-align: center;
+    cursor: pointer;
+}
+td:hover{
+    background: #eee;
+}
+.header .lt,.header .gt{
+    cursor: pointer;
+    width: 100%;
+}
+.datepicker{
+    width: 220px;
+}
+.header-text{
+    width: 180px !important;
+    display: inline-block;
+    text-align: center;
+}
