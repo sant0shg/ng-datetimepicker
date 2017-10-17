@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { DatepickerInputComponent } from './datepicker-input/datepicker-input.component';
+import { FormsModule } from '@angular/forms';
 var DatepickerModule = (function () {
     function DatepickerModule() {
     }
@@ -16,7 +17,8 @@ var DatepickerModule = (function () {
 DatepickerModule = __decorate([
     NgModule({
         imports: [
-            CommonModule
+            CommonModule,
+            FormsModule
         ],
         declarations: [
             DatepickerComponent,

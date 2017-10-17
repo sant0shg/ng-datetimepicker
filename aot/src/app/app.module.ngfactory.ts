@@ -12,7 +12,8 @@ import * as i2 from '../../../src/app/app.component';
 import * as i3 from './app.component.ngfactory';
 import * as i4 from '@angular/common';
 import * as i5 from '@angular/platform-browser';
-import * as i6 from '../../../src/app/datepicker/datepicker.module';
+import * as i6 from '@angular/forms';
+import * as i7 from '../../../src/app/datepicker/datepicker.module';
 export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.AppModule,
     [i2.AppComponent],(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -35,9 +36,10 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               [i5.ɵDomRendererFactory2]),i0.ɵmpd(6144,i5.ɵSharedStylesHost,(null as any),
               [i5.ɵDomSharedStylesHost]),i0.ɵmpd(4608,i0.Testability,i0.Testability,
               [i0.NgZone]),i0.ɵmpd(4608,i5.Meta,i5.Meta,[i4.DOCUMENT]),i0.ɵmpd(4608,
-              i5.Title,i5.Title,[i4.DOCUMENT]),i0.ɵmpd(512,i4.CommonModule,i4.CommonModule,
-              ([] as any[])),i0.ɵmpd(1024,i0.ErrorHandler,i5.ɵa,([] as any[])),i0.ɵmpd(1024,
-              i0.APP_INITIALIZER,(p0_0:any,p0_1:any) => {
+              i5.Title,i5.Title,[i4.DOCUMENT]),i0.ɵmpd(4608,i6.ɵi,i6.ɵi,([] as any[])),
+          i0.ɵmpd(512,i4.CommonModule,i4.CommonModule,([] as any[])),i0.ɵmpd(1024,
+              i0.ErrorHandler,i5.ɵa,([] as any[])),i0.ɵmpd(1024,i0.APP_INITIALIZER,
+              (p0_0:any,p0_1:any) => {
                 return [i5.ɵc(p0_0,p0_1)];
               },[[2,i5.NgProbeToken],[2,i0.NgProbeToken]]),i0.ɵmpd(512,i0.ApplicationInitStatus,
               i0.ApplicationInitStatus,[[2,i0.APP_INITIALIZER]]),i0.ɵmpd(131584,i0.ɵe,
@@ -45,7 +47,8 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
                   i0.ApplicationInitStatus]),i0.ɵmpd(2048,i0.ApplicationRef,(null as any),
               [i0.ɵe]),i0.ɵmpd(512,i0.ApplicationModule,i0.ApplicationModule,[i0.ApplicationRef]),
           i0.ɵmpd(512,i5.BrowserModule,i5.BrowserModule,[[3,i5.BrowserModule]]),i0.ɵmpd(512,
-              i6.DatepickerModule,i6.DatepickerModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,
-              i1.AppModule,([] as any[]))]);
+              i6.ɵba,i6.ɵba,([] as any[])),i0.ɵmpd(512,i6.FormsModule,i6.FormsModule,
+              ([] as any[])),i0.ɵmpd(512,i7.DatepickerModule,i7.DatepickerModule,([] as any[])),
+          i0.ɵmpd(512,i1.AppModule,i1.AppModule,([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9zYW50b3NoL1Byb2plY3RzL2FuZ3VsYXIvbmctZGF0ZXBpY2tlci9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvYXBwLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9zYW50b3NoL1Byb2plY3RzL2FuZ3VsYXIvbmctZGF0ZXBpY2tlci9zcmMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

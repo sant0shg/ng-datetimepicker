@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 var DatepickerComponent = (function () {
     function DatepickerComponent() {
         this.days = {
@@ -29,8 +29,10 @@ var DatepickerComponent = (function () {
             "Nov",
             "Dec"
         ];
+        this.clickedDate = new EventEmitter();
         this.currentDate = new Date();
     }
+    ;
     DatepickerComponent.prototype.ngOnInit = function () {
         this.selectedDate = this.currentDate;
         this.updateMonth(this.selectedDate);
@@ -113,9 +115,16 @@ var DatepickerComponent = (function () {
     };
     DatepickerComponent.prototype.selectDate = function (date) {
         this.selectedDate = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), date);
+        this.clickedDate.emit({
+            "date": this.selectedDate
+        });
     };
     return DatepickerComponent;
 }());
+__decorate([
+    Output('selectDate'),
+    __metadata("design:type", Object)
+], DatepickerComponent.prototype, "clickedDate", void 0);
 DatepickerComponent = __decorate([
     Component({
         selector: 'app-datepicker',

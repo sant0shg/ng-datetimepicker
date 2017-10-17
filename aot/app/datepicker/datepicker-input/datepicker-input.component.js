@@ -21,6 +21,11 @@ var DatepickerInputComponent = (function () {
     DatepickerInputComponent.prototype.closeDatePicker = function () {
         this.show = false;
     };
+    DatepickerInputComponent.prototype.onDateSelect = function (selectedDate) {
+        console.log(selectedDate);
+        this.selectedDate = selectedDate.date.toDateString();
+        this.closeDatePicker();
+    };
     return DatepickerInputComponent;
 }());
 DatepickerInputComponent = __decorate([

@@ -9,12 +9,14 @@
 import * as i0 from '@angular/core';
 import * as i1 from '../../../../src/app/datepicker/datepicker.module';
 import * as i2 from '@angular/common';
+import * as i3 from '@angular/forms';
 export const DatepickerModuleNgFactory:i0.NgModuleFactory<i1.DatepickerModule> = i0.ɵcmf(i1.DatepickerModule,
     ([] as any[]),(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
           [[8,([] as any[])],[3,i0.ComponentFactoryResolver],i0.NgModuleRef]),i0.ɵmpd(4608,
-          i2.NgLocalization,i2.NgLocaleLocalization,[i0.LOCALE_ID]),i0.ɵmpd(512,i2.CommonModule,
-          i2.CommonModule,([] as any[])),i0.ɵmpd(512,i1.DatepickerModule,i1.DatepickerModule,
-          ([] as any[]))]);
+          i2.NgLocalization,i2.NgLocaleLocalization,[i0.LOCALE_ID]),i0.ɵmpd(4608,i3.ɵi,
+          i3.ɵi,([] as any[])),i0.ɵmpd(512,i2.CommonModule,i2.CommonModule,([] as any[])),
+          i0.ɵmpd(512,i3.ɵba,i3.ɵba,([] as any[])),i0.ɵmpd(512,i3.FormsModule,i3.FormsModule,
+              ([] as any[])),i0.ɵmpd(512,i1.DatepickerModule,i1.DatepickerModule,([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9zYW50b3NoL1Byb2plY3RzL2FuZ3VsYXIvbmctZGF0ZXBpY2tlci9zcmMvYXBwL2RhdGVwaWNrZXIvZGF0ZXBpY2tlci5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy9zYW50b3NoL1Byb2plY3RzL2FuZ3VsYXIvbmctZGF0ZXBpY2tlci9zcmMvYXBwL2RhdGVwaWNrZXIvZGF0ZXBpY2tlci5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
