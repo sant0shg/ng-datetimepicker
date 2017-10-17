@@ -1,2 +1,2 @@
-<input type="text" (click)="openDatePicker()">
-<app-datepicker *ngIf="show"></app-datepicker>
+<input type="text" [(ngModel)]="selectedDate" (click)="openDatePicker()">
+<app-datepicker *ngIf="show" (selectDate)="onDateSelect($event)"></app-datepicker>

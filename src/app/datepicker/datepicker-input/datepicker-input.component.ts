@@ -9,6 +9,7 @@ import { DateService } from '../date.service';
 })
 export class DatepickerInputComponent implements OnInit {
   show:boolean = false;
+  selectedDate:string;
   constructor() { }
 
   ngOnInit() {
@@ -20,5 +21,11 @@ export class DatepickerInputComponent implements OnInit {
 
   closeDatePicker(){
     this.show = false;
+  }
+
+  onDateSelect(selectedDate:any){
+    console.log(selectedDate);
+    this.selectedDate = selectedDate.date.toDateString();
+    this.closeDatePicker();
   }
 }

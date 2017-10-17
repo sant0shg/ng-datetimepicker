@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-datepicker',
@@ -27,7 +29,8 @@ export class DatepickerComponent implements OnInit {
     "Nov",
     "Dec"
   ]
-  
+  @Output('selectDate')  clickedDate:any = new EventEmitter<any>();;
+
   constructor() { 
     this.currentDate = new Date();
   }
@@ -125,7 +128,9 @@ export class DatepickerComponent implements OnInit {
     
   selectDate(date:number){
     this.selectedDate = new Date(this.selectedDate.getFullYear(),this.selectedDate.getMonth(),date);
-    
+    this.clickedDate.emit({
+      "date":this.selectedDate
+    })
   }
   
   
