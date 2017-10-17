@@ -8,8 +8,8 @@
 
 import * as i0 from './datepicker-input.component.css.shim.ngstyle';
 import * as i1 from '@angular/core';
-import * as i2 from '../datepicker.component.ngfactory';
-import * as i3 from '../../../../../src/app/datepicker/datepicker.component';
+import * as i2 from '../datepicker/datepicker.component.ngfactory';
+import * as i3 from '../../../../../src/app/datepicker/datepicker/datepicker.component';
 import * as i4 from '../../../../../src/app/datepicker/datepicker-input/datepicker-input.component';
 import * as i5 from '@angular/common';
 import * as i6 from '../../../../../src/app/datepicker/date.service';

@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DatepickerComponent } from './datepicker.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 import { DatepickerInputComponent } from './datepicker-input/datepicker-input.component';
 var DatepickerModule = (function () {
     function DatepickerModule() {
