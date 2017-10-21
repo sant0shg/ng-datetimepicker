@@ -3,9 +3,10 @@ import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-datepicker',
+  selector: 'ng-datepicker-modal',
   templateUrl: './datepicker.component.html',
-  styleUrls: ['./datepicker.component.css']
+  styleUrls: ['./datepicker.component.css'],
+  host: { 'class':'ng-datepicker-modal'}
 })
 export class DatepickerComponent implements OnInit {
   days = {
@@ -29,7 +30,7 @@ export class DatepickerComponent implements OnInit {
     "Nov",
     "Dec"
   ]
-  @Output('selectDate')  clickedDate:any = new EventEmitter<any>();;
+  @Output('selectDate')  clickedDate:any = new EventEmitter<any>();
 
   constructor() { 
     this.currentDate = new Date();

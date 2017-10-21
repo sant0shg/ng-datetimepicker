@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  getDate(date:any){
+    
+    // var d = new Date(date);
+    return date.getFullYear()+"-"+date.getMonth();
+  }
 }
