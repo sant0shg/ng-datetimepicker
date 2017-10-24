@@ -391,7 +391,7 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.getDate = function (date) {
         // var d = new Date(date);
-        return date.getFullYear() + "-" + date.getMonth();
+        return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
     };
     return AppComponent;
 }());
