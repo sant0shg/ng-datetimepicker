@@ -11,6 +11,6 @@ export class AppComponent {
   getDate(date:any){
     
     // var d = new Date(date);
-    return date.getFullYear()+"-"+date.getMonth();
+    return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate();
   }
 }
