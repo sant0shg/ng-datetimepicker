@@ -9,6 +9,10 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
     }
+    AppComponent.prototype.getDate = function (date) {
+        // var d = new Date(date);
+        return date.getFullYear() + "-" + date.getMonth();
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([

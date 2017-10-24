@@ -24,6 +24,7 @@ DatepickerModule = __decorate([
             DatepickerComponent,
             DatepickerInputComponent
         ],
+        entryComponents: [],
         exports: [DatepickerComponent, DatepickerInputComponent]
     })
 ], DatepickerModule);

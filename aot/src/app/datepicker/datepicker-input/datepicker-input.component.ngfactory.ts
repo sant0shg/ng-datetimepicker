@@ -13,13 +13,13 @@ import * as i3 from '../../../../../src/app/datepicker/datepicker/datepicker.com
 import * as i4 from '../../../../../src/app/datepicker/datepicker-input/datepicker-input.component';
 import * as i5 from '@angular/forms';
 import * as i6 from '@angular/common';
-import * as i7 from '../../../../../src/app/datepicker/date.service';
 const styles_DatepickerInputComponent:any[] = [i0.styles];
 export const RenderType_DatepickerInputComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_DatepickerInputComponent,data:{}});
 function View_DatepickerInputComponent_1(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,0,(null as any),(null as any),1,'app-datepicker',
-      ([] as any[]),(null as any),[[(null as any),'selectDate']],(_v,en,$event) => {
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,0,(null as any),(null as any),1,'ng-datepicker-modal',
+      [['class','ng-datepicker-modal']],(null as any),[[(null as any),'selectDate']],
+      (_v,en,$event) => {
         var ad:boolean = true;
         var _co:any = _v.component;
         if (('selectDate' === en)) {
@@ -38,74 +38,67 @@ export function View_DatepickerInputComponent_0(_l:any):i1.ɵViewDefinition {
       'text']],[[2,'ng-untouched',(null as any)],[2,'ng-touched',(null as any)],[2,
       'ng-pristine',(null as any)],[2,'ng-dirty',(null as any)],[2,'ng-valid',(null as any)],
       [2,'ng-invalid',(null as any)],[2,'ng-pending',(null as any)]],[[(null as any),
-      'ngModelChange'],[(null as any),'click'],[(null as any),'input'],[(null as any),
-      'blur'],[(null as any),'compositionstart'],[(null as any),'compositionend']],
-      (_v,en,$event) => {
-        var ad:boolean = true;
-        var _co:i4.DatepickerInputComponent = _v.component;
-        if (('input' === en)) {
-          const pd_0:any = ((<any>i1.ɵnov(_v,1)._handleInput($event.target.value)) !== false);
-          ad = (pd_0 && ad);
-        }
-        if (('blur' === en)) {
-          const pd_1:any = ((<any>i1.ɵnov(_v,1).onTouched()) !== false);
-          ad = (pd_1 && ad);
-        }
-        if (('compositionstart' === en)) {
-          const pd_2:any = ((<any>i1.ɵnov(_v,1)._compositionStart()) !== false);
-          ad = (pd_2 && ad);
-        }
-        if (('compositionend' === en)) {
-          const pd_3:any = ((<any>i1.ɵnov(_v,1)._compositionEnd($event.target.value)) !== false);
-          ad = (pd_3 && ad);
-        }
-        if (('ngModelChange' === en)) {
-          const pd_4:any = ((<any>(_co.selectedDate = $event)) !== false);
-          ad = (pd_4 && ad);
-        }
-        if (('click' === en)) {
-          const pd_5:any = ((<any>_co.openDatePicker()) !== false);
-          ad = (pd_5 && ad);
-        }
-        return ad;
-      },(null as any),(null as any))),i1.ɵdid(1,16384,(null as any),0,i5.DefaultValueAccessor,
+      'click'],[(null as any),'input'],[(null as any),'blur'],[(null as any),'compositionstart'],
+      [(null as any),'compositionend']],(_v,en,$event) => {
+    var ad:boolean = true;
+    var _co:i4.DatepickerInputComponent = _v.component;
+    if (('input' === en)) {
+      const pd_0:any = ((<any>i1.ɵnov(_v,1)._handleInput($event.target.value)) !== false);
+      ad = (pd_0 && ad);
+    }
+    if (('blur' === en)) {
+      const pd_1:any = ((<any>i1.ɵnov(_v,1).onTouched()) !== false);
+      ad = (pd_1 && ad);
+    }
+    if (('compositionstart' === en)) {
+      const pd_2:any = ((<any>i1.ɵnov(_v,1)._compositionStart()) !== false);
+      ad = (pd_2 && ad);
+    }
+    if (('compositionend' === en)) {
+      const pd_3:any = ((<any>i1.ɵnov(_v,1)._compositionEnd($event.target.value)) !== false);
+      ad = (pd_3 && ad);
+    }
+    if (('click' === en)) {
+      const pd_4:any = ((<any>_co.openDatePicker()) !== false);
+      ad = (pd_4 && ad);
+    }
+    return ad;
+  },(null as any),(null as any))),i1.ɵdid(1,16384,(null as any),0,i5.DefaultValueAccessor,
       [i1.Renderer2,i1.ElementRef,[2,i5.COMPOSITION_BUFFER_MODE]],(null as any),(null as any)),
       i1.ɵprd(1024,(null as any),i5.NG_VALUE_ACCESSOR,(p0_0:any) => {
         return [p0_0];
       },[i5.DefaultValueAccessor]),i1.ɵdid(3,671744,(null as any),0,i5.NgModel,[[8,
           (null as any)],[8,(null as any)],[8,(null as any)],[2,i5.NG_VALUE_ACCESSOR]],
-          {model:[0,'model']},{update:'ngModelChange'}),i1.ɵprd(2048,(null as any),
-          i5.NgControl,(null as any),[i5.NgModel]),i1.ɵdid(5,16384,(null as any),0,
-          i5.NgControlStatus,[i5.NgControl],(null as any),(null as any)),(_l()(),i1.ɵted(-1,
-          (null as any),['\n'])),(_l()(),i1.ɵand(16777216,(null as any),(null as any),
-          1,(null as any),View_DatepickerInputComponent_1)),i1.ɵdid(8,16384,(null as any),
-          0,i6.NgIf,[i1.ViewContainerRef,i1.TemplateRef],{ngIf:[0,'ngIf']},(null as any))],
-      (_ck,_v) => {
-        var _co:i4.DatepickerInputComponent = _v.component;
-        const currVal_7:any = _co.selectedDate;
-        _ck(_v,3,0,currVal_7);
-        const currVal_8:any = _co.show;
-        _ck(_v,8,0,currVal_8);
-      },(_ck,_v) => {
-        const currVal_0:any = i1.ɵnov(_v,5).ngClassUntouched;
-        const currVal_1:any = i1.ɵnov(_v,5).ngClassTouched;
-        const currVal_2:any = i1.ɵnov(_v,5).ngClassPristine;
-        const currVal_3:any = i1.ɵnov(_v,5).ngClassDirty;
-        const currVal_4:any = i1.ɵnov(_v,5).ngClassValid;
-        const currVal_5:any = i1.ɵnov(_v,5).ngClassInvalid;
-        const currVal_6:any = i1.ɵnov(_v,5).ngClassPending;
-        _ck(_v,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
-      });
+          {model:[0,'model']},(null as any)),i1.ɵprd(2048,(null as any),i5.NgControl,
+          (null as any),[i5.NgModel]),i1.ɵdid(5,16384,(null as any),0,i5.NgControlStatus,
+          [i5.NgControl],(null as any),(null as any)),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n'])),(_l()(),i1.ɵand(16777216,(null as any),(null as any),1,(null as any),
+          View_DatepickerInputComponent_1)),i1.ɵdid(8,16384,(null as any),0,i6.NgIf,
+          [i1.ViewContainerRef,i1.TemplateRef],{ngIf:[0,'ngIf']},(null as any))],(_ck,
+      _v) => {
+    var _co:i4.DatepickerInputComponent = _v.component;
+    const currVal_7:any = _co._selectedDate;
+    _ck(_v,3,0,currVal_7);
+    const currVal_8:any = _co.show;
+    _ck(_v,8,0,currVal_8);
+  },(_ck,_v) => {
+    const currVal_0:any = i1.ɵnov(_v,5).ngClassUntouched;
+    const currVal_1:any = i1.ɵnov(_v,5).ngClassTouched;
+    const currVal_2:any = i1.ɵnov(_v,5).ngClassPristine;
+    const currVal_3:any = i1.ɵnov(_v,5).ngClassDirty;
+    const currVal_4:any = i1.ɵnov(_v,5).ngClassValid;
+    const currVal_5:any = i1.ɵnov(_v,5).ngClassInvalid;
+    const currVal_6:any = i1.ɵnov(_v,5).ngClassPending;
+    _ck(_v,0,0,currVal_0,currVal_1,currVal_2,currVal_3,currVal_4,currVal_5,currVal_6);
+  });
 }
 export function View_DatepickerInputComponent_Host_0(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,0,(null as any),(null as any),2,'app-datepicker-input',
-      ([] as any[]),(null as any),(null as any),(null as any),View_DatepickerInputComponent_0,
-      RenderType_DatepickerInputComponent)),i1.ɵprd(4608,(null as any),i7.DateService,
-      i7.DateService,([] as any[])),i1.ɵdid(2,114688,(null as any),0,i4.DatepickerInputComponent,
-      ([] as any[]),(null as any),(null as any))],(_ck,_v) => {
-    _ck(_v,2,0);
-  },(null as any));
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,0,(null as any),(null as any),1,'ng-datepicker',
+      [['class','ng-datepicker']],(null as any),(null as any),(null as any),View_DatepickerInputComponent_0,
+      RenderType_DatepickerInputComponent)),i1.ɵdid(1,49152,(null as any),0,i4.DatepickerInputComponent,
+      ([] as any[]),(null as any),(null as any))],(null as any),(null as any));
 }
-export const DatepickerInputComponentNgFactory:i1.ComponentFactory<i4.DatepickerInputComponent> = i1.ɵccf('app-datepicker-input',
-    i4.DatepickerInputComponent,View_DatepickerInputComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvc2FudG9zaC9Qcm9qZWN0cy9hbmd1bGFyL25nLWRhdGVwaWNrZXIvc3JjL2FwcC9kYXRlcGlja2VyL2RhdGVwaWNrZXItaW5wdXQvZGF0ZXBpY2tlci1pbnB1dC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50LnRzLkRhdGVwaWNrZXJJbnB1dENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxpbnB1dCB0eXBlPVwidGV4dFwiIFsobmdNb2RlbCldPVwic2VsZWN0ZWREYXRlXCIgKGNsaWNrKT1cIm9wZW5EYXRlUGlja2VyKClcIj5cbjxhcHAtZGF0ZXBpY2tlciAqbmdJZj1cInNob3dcIiAoc2VsZWN0RGF0ZSk9XCJvbkRhdGVTZWxlY3QoJGV2ZW50KVwiPjwvYXBwLWRhdGVwaWNrZXI+IiwiPGFwcC1kYXRlcGlja2VyLWlucHV0PjwvYXBwLWRhdGVwaWNrZXItaW5wdXQ+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQ0E7TUFBQTtRQUFBO1FBQUE7UUFBNkI7VUFBQTtVQUFBO1FBQUE7UUFBN0I7TUFBQSwyRUFBQTtNQUFBOztRQUFBOzs7O29CQURBO01BQUE7TUFBQTtNQUFBO01BQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO1VBQUE7VUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO1VBQUE7VUFBQTtRQUFBO1FBQW1CO1VBQUE7VUFBQTtRQUFBO1FBQTJCO1VBQUE7VUFBQTtRQUFBO1FBQTlDO01BQUEsdUNBQUE7TUFBQTthQUFBO1FBQUE7TUFBQSxvQ0FBQTtVQUFBO1VBQUEscURBQUE7dUJBQUEsbUNBQUE7NkJBQUEsNENBQXlFO1VBQUEsdUJBQ3pFO1VBQUEseURBQUE7VUFBQTs7O1FBRG1CO1FBQW5CLFdBQW1CLFNBQW5CO1FBQ2dCO1FBQWhCLFdBQWdCLFNBQWhCOztRQURBO1FBQUE7UUFBQTtRQUFBO1FBQUE7UUFBQTtRQUFBO1FBQUEsV0FBQSxxRUFBQTs7OztvQkNBQTtNQUFBO3lDQUFBO3FCQUFBLHNCQUFBO01BQUE7SUFBQTs7OzsifQ==
+export const DatepickerInputComponentNgFactory:i1.ComponentFactory<i4.DatepickerInputComponent> = i1.ɵccf('ng-datepicker',
+    i4.DatepickerInputComponent,View_DatepickerInputComponent_Host_0,{customFormatDate:'customDate'},
+    {onDateSelected:'onDateSelected'},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50LnRzIiwibmc6Ly8vVXNlcnMvc2FudG9zaC9Qcm9qZWN0cy9hbmd1bGFyL25nLWRhdGVwaWNrZXIvc3JjL2FwcC9kYXRlcGlja2VyL2RhdGVwaWNrZXItaW5wdXQvZGF0ZXBpY2tlci1pbnB1dC5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3NhbnRvc2gvUHJvamVjdHMvYW5ndWxhci9uZy1kYXRlcGlja2VyL3NyYy9hcHAvZGF0ZXBpY2tlci9kYXRlcGlja2VyLWlucHV0L2RhdGVwaWNrZXItaW5wdXQuY29tcG9uZW50LnRzLkRhdGVwaWNrZXJJbnB1dENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxpbnB1dCB0eXBlPVwidGV4dFwiIChjbGljayk9XCJvcGVuRGF0ZVBpY2tlcigpXCIgW25nTW9kZWxdPVwiX3NlbGVjdGVkRGF0ZVwiPlxuPG5nLWRhdGVwaWNrZXItbW9kYWwgKm5nSWY9XCJzaG93XCIgKHNlbGVjdERhdGUpPVwib25EYXRlU2VsZWN0KCRldmVudClcIj48L25nLWRhdGVwaWNrZXItbW9kYWw+IiwiPG5nLWRhdGVwaWNrZXI+PC9uZy1kYXRlcGlja2VyPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQ0E7TUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFrQztVQUFBO1VBQUE7UUFBQTtRQUFsQztNQUFBLDJFQUFBO01BQUE7O1FBQUE7Ozs7b0JBREE7TUFBQTtNQUFBO01BQUE7TUFBQTtNQUFBO0lBQUE7SUFBQTtJQUFBO01BQUE7TUFBQTtJQUFBO0lBQUE7TUFBQTtNQUFBO0lBQUE7SUFBQTtNQUFBO01BQUE7SUFBQTtJQUFBO01BQUE7TUFBQTtJQUFBO0lBQW1CO01BQUE7TUFBQTtJQUFBO0lBQW5CO0VBQUEsdUNBQUE7TUFBQTthQUFBO1FBQUE7TUFBQSxvQ0FBQTtVQUFBO1VBQUEsMENBQUE7VUFBQSxtQ0FBQTtVQUFBLDRDQUF3RTtVQUFBLFNBQ3hFO1VBQUEseUNBQUE7VUFBQTs7O0lBRDhDO0lBQTlDLFdBQThDLFNBQTlDO0lBQ3FCO0lBQXJCLFdBQXFCLFNBQXJCOztJQURBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsV0FBQSxxRUFBQTs7OztvQkNBQTtNQUFBO3lDQUFBLFVBQUE7TUFBQTs7OzsifQ==

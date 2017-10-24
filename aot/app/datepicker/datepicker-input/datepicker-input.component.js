@@ -7,33 +7,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
-import { DateService } from '../date.service';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 var DatepickerInputComponent = (function () {
     function DatepickerInputComponent() {
+        /**
+         * Hide and show the datepicker
+         */
         this.show = false;
+        /**
+         * Options
+         */
+        this.options = {
+            "format": ""
+        };
+        // get selectedDate(): string { return this._selectedDate; }  
+        /**
+         * Outputs when date is selected
+         */
+        this.onDateSelected = new EventEmitter();
     }
-    DatepickerInputComponent.prototype.ngOnInit = function () {
-    };
+    /**
+     * Opens the datepicker modal
+     */
     DatepickerInputComponent.prototype.openDatePicker = function () {
         this.show = true;
     };
+    /**
+     * Closes the datepicker modal
+     */
     DatepickerInputComponent.prototype.closeDatePicker = function () {
         this.show = false;
     };
+    /**
+     * Event on date is selected
+     * @param selectedDate accepts the date object
+     */
     DatepickerInputComponent.prototype.onDateSelect = function (selectedDate) {
-        console.log(selectedDate);
-        this.selectedDate = selectedDate.date.toDateString();
+        if (this.customFormatDate) {
+            this._selectedDate = this.customFormatDate(selectedDate.date);
+        }
+        else {
+            this._selectedDate = selectedDate.date;
+        }
+        // this.selectedDate = this.dateformatService.format(selectedDate,"dd-mm-yyyy",false);
         this.closeDatePicker();
+        this.onDateSelected.emit({
+            "date": this._selectedDate
+        });
     };
     return DatepickerInputComponent;
 }());
+__decorate([
+    Input('customDate'),
+    __metadata("design:type", Function)
+], DatepickerInputComponent.prototype, "customFormatDate", void 0);
+__decorate([
+    Output('onDateSelected'),
+    __metadata("design:type", Object)
+], DatepickerInputComponent.prototype, "onDateSelected", void 0);
 DatepickerInputComponent = __decorate([
     Component({
-        selector: 'app-datepicker-input',
+        selector: 'ng-datepicker',
         templateUrl: './datepicker-input.component.html',
         styleUrls: ['./datepicker-input.component.css'],
-        providers: [DateService]
+        host: { 'class': 'ng-datepicker' }
     }),
     __metadata("design:paramtypes", [])
 ], DatepickerInputComponent);

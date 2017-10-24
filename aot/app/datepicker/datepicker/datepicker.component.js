@@ -32,7 +32,6 @@ var DatepickerComponent = (function () {
         this.clickedDate = new EventEmitter();
         this.currentDate = new Date();
     }
-    ;
     DatepickerComponent.prototype.ngOnInit = function () {
         this.selectedDate = this.currentDate;
         this.updateMonth(this.selectedDate);
@@ -127,9 +126,10 @@ __decorate([
 ], DatepickerComponent.prototype, "clickedDate", void 0);
 DatepickerComponent = __decorate([
     Component({
-        selector: 'app-datepicker',
+        selector: 'ng-datepicker-modal',
         templateUrl: './datepicker.component.html',
-        styleUrls: ['./datepicker.component.css']
+        styleUrls: ['./datepicker.component.css'],
+        host: { 'class': 'ng-datepicker-modal' }
     }),
     __metadata("design:paramtypes", [])
 ], DatepickerComponent);
