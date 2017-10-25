@@ -10,8 +10,9 @@ var AppComponent = (function () {
         this.title = 'app';
     }
     AppComponent.prototype.getDate = function (date) {
+        console.log(date);
         // var d = new Date(date);
-        return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+        return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
     };
     return AppComponent;
 }());

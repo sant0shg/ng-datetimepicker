@@ -30,10 +30,10 @@ var DatepickerComponent = (function () {
             "Dec"
         ];
         this.clickedDate = new EventEmitter();
-        this.currentDate = new Date();
+        this.currentDate = this.getToday();
     }
     DatepickerComponent.prototype.ngOnInit = function () {
-        this.selectedDate = this.currentDate;
+        this.selectedDate = this.getToday();
         this.updateMonth(this.selectedDate);
     };
     DatepickerComponent.prototype.previousMonth = function () {
@@ -44,7 +44,8 @@ var DatepickerComponent = (function () {
             tempMonth = 11;
             tempYear--;
         }
-        this.selectedDate = new Date(tempYear, tempMonth);
+        this.selectedDate.setMonth(tempMonth);
+        this.selectedDate.setYear(tempYear);
         this.updateMonth(this.selectedDate);
     };
     DatepickerComponent.prototype.nextMonth = function () {
@@ -55,12 +56,14 @@ var DatepickerComponent = (function () {
             tempMonth = 0;
             tempYear++;
         }
-        this.selectedDate = new Date(tempYear, tempMonth);
+        this.selectedDate.setMonth(tempMonth);
+        this.selectedDate.setYear(tempYear);
         this.updateMonth(this.selectedDate);
     };
     DatepickerComponent.prototype.updateMonth = function (date) {
         var year = date.getFullYear();
         var month = date.getMonth();
+        console.log(this.currentDate);
         if (year == this.currentDate.getFullYear() && month == this.currentDate.getMonth()) {
             this.activeMonthYear = true;
         }
@@ -90,7 +93,6 @@ var DatepickerComponent = (function () {
             day: temp,
             pos: d[1]
         };
-        console.log(this.days);
     };
     DatepickerComponent.prototype.getMonthStartingPos = function (year, month) {
         var noOfDays = this.getNoOfDays(year, month);
@@ -113,10 +115,19 @@ var DatepickerComponent = (function () {
         return dat.getDay();
     };
     DatepickerComponent.prototype.selectDate = function (date) {
-        this.selectedDate = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), date);
+        this.selectedDate.setDate(date);
         this.clickedDate.emit({
             "date": this.selectedDate
         });
+    };
+    DatepickerComponent.prototype.setHours = function (hours) {
+        this.selectedDate.setHours(hours);
+    };
+    DatepickerComponent.prototype.setMinutes = function (minutes) {
+        this.selectedDate.setMinutes(minutes);
+    };
+    DatepickerComponent.prototype.getToday = function () {
+        return new Date();
     };
     return DatepickerComponent;
 }());
