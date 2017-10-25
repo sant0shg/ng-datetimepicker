@@ -33,13 +33,12 @@ export class DatepickerComponent implements OnInit {
   @Output('selectDate')  clickedDate:any = new EventEmitter<any>();
 
   constructor() { 
-    this.currentDate = new Date();
+    this.currentDate = this.getToday();
   }
 
   ngOnInit() {
-    this.selectedDate = this.currentDate;
+    this.selectedDate = this.getToday();
     this.updateMonth(this.selectedDate);
-    
   }
 
   previousMonth(){
@@ -50,8 +49,9 @@ export class DatepickerComponent implements OnInit {
       tempMonth = 11;
       tempYear--;
     }
-    this.selectedDate = new Date(tempYear,tempMonth);
-    this.updateMonth(this.selectedDate)
+    this.selectedDate.setMonth(tempMonth);
+    this.selectedDate.setYear(tempYear);
+    this.updateMonth(this.selectedDate);
   }
 
   nextMonth(){
@@ -62,13 +62,15 @@ export class DatepickerComponent implements OnInit {
       tempMonth = 0;
       tempYear++;
     }
-    this.selectedDate = new Date(tempYear,tempMonth);
-    this.updateMonth(this.selectedDate)
+    this.selectedDate.setMonth(tempMonth);
+    this.selectedDate.setYear(tempYear);
+    this.updateMonth(this.selectedDate);
   }
 
   updateMonth(date:Date){
     let year = date.getFullYear();
     let month = date.getMonth();
+    console.log(this.currentDate);
     if(year == this.currentDate.getFullYear() && month == this.currentDate.getMonth()){
       this.activeMonthYear = true;
     }else{
@@ -100,7 +102,6 @@ export class DatepickerComponent implements OnInit {
       day:temp,
       pos:d[1]
     }
-    console.log(this.days);
   }
 
   getMonthStartingPos(year,month){
@@ -128,11 +129,21 @@ export class DatepickerComponent implements OnInit {
   }
     
   selectDate(date:number){
-    this.selectedDate = new Date(this.selectedDate.getFullYear(),this.selectedDate.getMonth(),date);
+    this.selectedDate.setDate(date);
     this.clickedDate.emit({
       "date":this.selectedDate
     })
   }
   
+  setHours(hours){
+    this.selectedDate.setHours(hours);
+  }
+
+  setMinutes(minutes){
+    this.selectedDate.setMinutes(minutes);
+  }
   
+  getToday(){
+    return new Date();
+  }
 }

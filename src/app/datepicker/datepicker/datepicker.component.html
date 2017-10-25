@@ -21,6 +21,15 @@
     </ng-template>
   </td>
   </tr>
-  
+  </table>
+  <table class="time">
+    <tr>  
+      <td>
+        <input type="number" value="{{selectedDate.getHours()}}" #hours (blur)="setHours(hours.value)">
+      </td>
+      <td>
+        <input type="number" value="{{selectedDate.getMinutes()}}" #minutes (blur)="setMinutes(minutes.value)">
+      </td>
+    </tr>
   </table>
 </div>

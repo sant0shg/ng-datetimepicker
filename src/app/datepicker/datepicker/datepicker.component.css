@@ -21,3 +21,6 @@ td:hover{
     display: inline-block;
     text-align: center;
 }
+.time td input{
+    width: 100px;
+}

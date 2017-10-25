@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'app';
 
   getDate(date:any){
-    
+    console.log(date);
     // var d = new Date(date);
-    return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate();
+    return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes();
   }
 }
