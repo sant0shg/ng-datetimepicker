@@ -17,7 +17,7 @@ https://netdeamon.github.io/ng-datetimepicker/
 
 Here is a preview of datepicker
 
-<img src="https://raw.githubusercontent.com/netdeamon/ng-datepicker/master/demo.JPG" alt="demo"/>
+<img src="https://raw.githubusercontent.com/netdeamon/ng-datepicker/master/demo2.png" alt="demo"/>
 
 ## FAQs
 
