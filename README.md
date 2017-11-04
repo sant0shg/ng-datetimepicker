@@ -13,6 +13,12 @@ You can view the demo(wip) at
 
 https://netdeamon.github.io/ng-datetimepicker/
 
+## Install
+
+You can install the datetimepicker by npm 
+
+    npm install ng4-datetimepicker --save
+
 ## Screenshot
 
 Here is a preview of datetimepicker

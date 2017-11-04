@@ -1,0 +1,23 @@
+{
+    "name": "ng4-datetimepicker",
+    "version": "1.0.3",
+    "description": "Angular datetimepicker implementation",
+    "main": "index.js",
+    "author": "Netdeamon",
+    "license": "MIT",
+    "readme": "README.md",
+    "keywords": [
+      "angular",
+      "angular2",
+      "angular4",
+      "datepicker",
+      "timepicker",
+      "datetimepicker",
+      "datetime"
+    ],
+    "repository" :{
+       "type" : "git",
+       "url" : "https://github.com/netdeamon/ng-datetimepicker.git"
+    }
+}
+  

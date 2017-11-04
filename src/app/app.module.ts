@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DateTimePickerModule } from './datetimepicker';
+import { DateTimePickerModule } from '../../node_modules/ng4-datetimepicker';
 
 
 @NgModule({

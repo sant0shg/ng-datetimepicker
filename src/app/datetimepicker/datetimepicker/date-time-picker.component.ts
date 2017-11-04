@@ -3,10 +3,10 @@ import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'ng-datetimepicker',
+  selector: 'ng-datetimepickermodal',
   templateUrl: './date-time-picker.component.html',
   styleUrls: ['./date-time-picker.component.css'],
-  host: { 'class':'ng-datetimepicker'}
+  host: { 'class':'ng-datetimepickermodal'}
 })
 export class DateTimePickerComponent implements OnInit {
   days = {
