@@ -2,12 +2,12 @@ import { Component, OnInit, ViewChild, Output, EventEmitter, Input } from '@angu
 
 
 @Component({
-  selector: 'ng-datepicker',
-  templateUrl: './datepicker-input.component.html',
-  styleUrls: ['./datepicker-input.component.css'],
-  host:{ 'class': 'ng-datepicker'}
+  selector: 'ng-datetimepicker',
+  templateUrl: './date-time-picker-input.component.html',
+  styleUrls: ['./date-time-picker-input.component.css'],
+  host:{ 'class': 'ng-datetimepicker'}
 })
-export class DatepickerInputComponent {
+export class DateTimePickerInputComponent {
   /**
    * Hide and show the datepicker
    */
@@ -16,13 +16,6 @@ export class DatepickerInputComponent {
    * The selected date is stored
    */
   _selectedDate:string;
-
-  /**
-   * Options
-   */
-  options:any = {
-    "format":""
-  };
 
   /**
    * Input the date from outside

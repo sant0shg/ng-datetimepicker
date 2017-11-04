@@ -3,12 +3,12 @@ import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'ng-datepicker-modal',
-  templateUrl: './datepicker.component.html',
-  styleUrls: ['./datepicker.component.css'],
-  host: { 'class':'ng-datepicker-modal'}
+  selector: 'ng-datetimepicker',
+  templateUrl: './date-time-picker.component.html',
+  styleUrls: ['./date-time-picker.component.css'],
+  host: { 'class':'ng-datetimepicker'}
 })
-export class DatepickerComponent implements OnInit {
+export class DateTimePickerComponent implements OnInit {
   days = {
     day: [],
     pos:0
@@ -41,6 +41,9 @@ export class DatepickerComponent implements OnInit {
     this.updateMonth(this.selectedDate);
   }
 
+  /**
+   * Go to previous month
+   */
   previousMonth(){
     let tempMonth = this.selectedDate.getMonth();
     let tempYear = this.selectedDate.getFullYear();
@@ -54,6 +57,9 @@ export class DatepickerComponent implements OnInit {
     this.updateMonth(this.selectedDate);
   }
 
+  /**
+   * Go to next month
+   */
   nextMonth(){
     let tempMonth = this.selectedDate.getMonth();
     let tempYear = this.selectedDate.getFullYear();
@@ -67,6 +73,11 @@ export class DatepickerComponent implements OnInit {
     this.updateMonth(this.selectedDate);
   }
 
+  /**
+   * Updates the month in UI.
+   * @param date any date passed, can be previous month or 
+   * current month
+   */
   updateMonth(date:Date){
     let year = date.getFullYear();
     let month = date.getMonth();
@@ -76,41 +87,60 @@ export class DatepickerComponent implements OnInit {
     }else{
       this.activeMonthYear = false;
     }
-    var d:any = this.getMonthStartingPos(year,month);
-    var temp = [];
-    var t = [];
-    var offset = d[1];
+    let monthStartingPosition:number = this.getMonthStartingPos(year,month);
+    let noOfDaysInMonth:number = this.getNoOfDays(year,month);
+    // array containing array of days
+    // So Nov 2017 will contain 
+    // weekArray
+    // -1 -1 -1 1 2 3 4 --> daysArray
+    // 5 6 7 8 9 10 --> daysArray
+    // ...
+    let weekArray = [];
+    let daysArray = [];
+    let offset = monthStartingPosition;
     for(let i=0;i<offset;i++){
-      t.push(-1);
+      daysArray.push(-1);
     }
-    for(let i=1;i<=d[0];i++){
+    for(let i=1;i<=noOfDaysInMonth;i++){
       
-      if(t.length != 7){
-        t.push(i);
+      if(daysArray.length != 7){
+        daysArray.push(i);
       }
-      if(t.length == 7){
-        temp.push(t);
-        t = [];
+      if(daysArray.length == 7){
+        weekArray.push(daysArray);
+        daysArray = [];
       }
       
     }
-    if(t.length > 0){
-      temp.push(t);
+    if(daysArray.length > 0){
+      weekArray.push(daysArray);
     }
     
     this.days = {
-      day:temp,
-      pos:d[1]
+      day:weekArray,
+      pos:monthStartingPosition
     }
   }
 
-  getMonthStartingPos(year,month){
-    let noOfDays = this.getNoOfDays(year,month);
-    let daysPos = this.getArrayPos(year,month,1);
-    return [noOfDays,daysPos];
+  /**
+   * Get number of days in a month and the starting position or "day of the week" of the month.
+   * For example Nov 2017 starts on Wednesday ie 3 (0 is Sun,6 is Sat)
+   * And Nov 2017 contains 30 days 
+   * so it returns [30,3]
+   * @param year Any year that is passed
+   * @param month Any month that is passed
+   */
+  getMonthStartingPos(year,month):number{
+    let daysPos:number = this.getArrayPos(year,month,1);
+    return daysPos;
   }
-    
-  getNoOfDays(year,month){
+  
+  /**
+   * Get the number of days in a month. Adjust for leap year.
+   * @param year any year that is passed
+   * @param month any month that is passed
+   */
+  getNoOfDays(year,month):number{
     var days = 
     [31,28,31,30,31,30,31,31,30,31,30,31];
     if(year%4 === 0){
