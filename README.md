@@ -26,13 +26,13 @@ Here is a preview of datetimepicker
     You can pass the function which will be called before displaying the date in the input field. 
     Example 
 
-    > <ng-datetimepicker [customDate]="getDate"></ng-datetimepicker>
+        <ng-datetimepicker [customDate]="getDate"></ng-datetimepicker>
 
     `getDate`function receives the `date` object, and you can manipulate it in anyway you want.
 
-    > getDate(date:any){
-    >    return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate();
-    > }
+        getDate(date:any){
+         return date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate();
+        }
 
     It is optional to pass the custom date function. If you do not pass the custom date function, then the "toString()" value of the date object is used in the input field. 
 
@@ -41,9 +41,9 @@ Here is a preview of datetimepicker
     You can override the classes in the datepicker in your `styles.css` stylesheet. The parent class of the datetimepicker is `ng-datepicker`.
     Example in `styles.css`
     
-    > .ng-datetimepicker .header{
-    >    color:red;
-    > }
+      .ng-datetimepicker .header{
+         color:red;
+      }
     
 - What are the dependencies?
 
