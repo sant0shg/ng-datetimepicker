@@ -7,8 +7,5 @@ describe('ng-datepicker App', () => {
     page = new NgDatepickerPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
-  });
+  
 });
