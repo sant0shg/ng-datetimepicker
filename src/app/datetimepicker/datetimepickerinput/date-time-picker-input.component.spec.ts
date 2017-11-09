@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DateTimePickerInputComponent } from './date-time-picker-input.component';
 import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('DatepickerInputComponent', () => {
   let component: DateTimePickerInputComponent;
@@ -10,7 +11,8 @@ describe('DatepickerInputComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DateTimePickerInputComponent ],
-      imports:[FormsModule]
+      imports:[FormsModule],
+      schemas:[CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
