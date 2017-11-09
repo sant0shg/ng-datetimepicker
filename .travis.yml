@@ -19,11 +19,9 @@ before_install:
 
 before_script:
 - npm install -g angular-cli
+- npm install -g karma
 - npm install
 # - ng build
 # - node_modules/.bin/ngc -p tsconfig-aot.json && ng build -op ./docs --aot --env=prod
 
-#script: karma start config/karma.conf.js --single-run
-script:
-- ng test
-- ng e2e
+script: karma start karma.conf.js --single-run
