@@ -7,19 +7,24 @@ table.time{
     border: 0;
     border-spacing: 0px;
 }
+td.date{
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}
+
 td.today{
     background: #337ab7;
     color: #fff;
 }
-td{
-    text-align: center;
-    cursor: pointer;
-}
-td:hover{
-    background: #eee;
+td:hover:not(.today){
+    background: #ddd;
 }
 .header{
-    background: #ccc;
+    background: #e9e9e9;
     padding: 6px 0px;
     display: flex;
     justify-content: space-around;
