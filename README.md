@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/netdeamon/ng-datetimepicker.svg?branch=master)](https://travis-ci.org/netdeamon/ng-datetimepicker)
+
 # NgDateTimepicker
 
 This is a datetimepicker implementation in angular 4.X
