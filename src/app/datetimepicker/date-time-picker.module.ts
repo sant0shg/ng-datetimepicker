@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DateTimePickerComponent } from './datetimepicker/date-time-picker.component';
-import { DateTimePickerInputComponent } from './datetimepickerinput/date-time-picker-input.component';
 import { FormsModule }   from '@angular/forms';
 
 @NgModule({
@@ -10,10 +9,9 @@ import { FormsModule }   from '@angular/forms';
     FormsModule
   ],
   declarations: [
-    DateTimePickerComponent,
-    DateTimePickerInputComponent
+    DateTimePickerComponent
   ],
   entryComponents:[],
-  exports:[DateTimePickerComponent,DateTimePickerInputComponent]
+  exports:[DateTimePickerComponent]
 })
 export class DateTimePickerModule { }
