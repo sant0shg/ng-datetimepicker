@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
+  config:any = {
+    showTime:false
+  }
   getDate(date:any){
     console.log(date);
     // var d = new Date(date);

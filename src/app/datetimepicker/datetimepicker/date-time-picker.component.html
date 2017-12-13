@@ -22,7 +22,7 @@
   </td>
   </tr>
   </table>
-  <table class="time">
+  <table class="time" *ngIf="options.showTime">
     <tr>  
       <td>
         <input type="number" value="{{selectedDate.getHours()}}" #hours (blur)="setHours(hours.value)">

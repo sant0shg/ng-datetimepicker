@@ -1,12 +1,13 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, SimpleChanges } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
+import { SimpleChange } from '@angular/core/src/change_detection/change_detection_util';
 
 @Component({
-  selector: 'ng-datetimepickermodal',
+  selector: 'ng-datetimepicker',
   templateUrl: './date-time-picker.component.html',
   styleUrls: ['./date-time-picker.component.css'],
-  host: { 'class':'ng-datetimepickermodal'}
+  host: { 'class':'ng-datetimepicker'}
 })
 export class DateTimePickerComponent implements OnInit {
   days = {
@@ -30,15 +31,35 @@ export class DateTimePickerComponent implements OnInit {
     "Nov",
     "Dec"
   ]
+
+  options:any = {
+    showTime:true
+  };
+
+  @Input('config') config:any;
   @Output('selectDate')  clickedDate:any = new EventEmitter<any>();
 
   constructor() { 
     this.currentDate = this.getToday();
   }
 
+  ngOnChanges(changes:SimpleChanges){
+    if(changes["config"].previousValue != changes["config"].currentValue){
+      this.setOptions();
+    }
+  }
+  
+  setOptions(){
+    if(this.config && this.config.hasOwnProperty('showTime')){
+      this.options.showTime = this.config.showTime;
+    }
+  }
+
   ngOnInit() {
+    debugger;
     this.selectedDate = this.getToday();
     this.updateMonth(this.selectedDate);
+    this.setOptions();
   }
 
   /**

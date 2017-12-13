@@ -27,6 +27,7 @@ Here is a preview of datetimepicker
 
 <img src="https://raw.githubusercontent.com/netdeamon/ng-datepicker/master/demo2.png" alt="demo"/>
 
+
 ## FAQs
 
 -  How to change the date format?
